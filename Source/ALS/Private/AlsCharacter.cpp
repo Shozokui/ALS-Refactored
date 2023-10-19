@@ -139,7 +139,7 @@ void AAlsCharacter::BeginPlay()
 {
 	ALS_ENSURE(IsValid(Settings));
 	ALS_ENSURE(IsValid(MovementSettings));
-	ALS_ENSURE(AnimationInstance.IsValid());
+	// ALS_ENSURE(AnimationInstance.IsValid());
 
 	ALS_ENSURE_MESSAGE(!bUseControllerRotationPitch && !bUseControllerRotationYaw && !bUseControllerRotationRoll,
 	                   TEXT("These settings are not allowed and must be turned off!"));
@@ -367,10 +367,10 @@ void AAlsCharacter::RefreshMeshProperties() const
 		GetMesh()->SetUsingAbsoluteRotation(bUseAbsoluteRotation);
 	}
 
-	if (!bMeshIsTicking)
-	{
-		AnimationInstance->MarkPendingUpdate();
-	}
+	// if (!bMeshIsTicking)
+	// {
+	// 	AnimationInstance->MarkPendingUpdate();
+	// }
 }
 
 void AAlsCharacter::RefreshMovementBase()
